@@ -1,0 +1,11 @@
+{
+	"providers": [
+		"Lazychef\Core\LazychefServiceProvider"
+	],
+	"aliases": [
+		{
+			"alias": "Lazychef",
+			"facade": "Lazychef\Core\Facades\LazychefFacade"
+		}
+	]
+}
