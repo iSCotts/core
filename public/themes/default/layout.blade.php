@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <header>
-        <h1><a href="{{ lazychef_url('/') }}">{{ site_title() }}</a></h1>
+        <h1><a href="{{ lazychef_url('') }}">{{ site_title() }}</a></h1>
         <nav>
           <ul>
             <li><a href="{{ lazychef_url('archive') }}">Posts</a></li>

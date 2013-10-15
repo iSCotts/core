@@ -1,7 +1,7 @@
 <?php
 
 $lazychefControllers = 'Lazychef\Core\Controllers\\';
-
+//Route::get('/login', array('uses' => $lazychefControllers.'LoginController@create', 'as' => 'lazychef.admin.login'));
 Route::group(Config::get('core::routes.blog_group_rules'), function() use ($lazychefControllers)
 {
 	Route::get('/', array('uses' => $lazychefControllers.'HomeController@index', 'as' => 'lazychef.index'));
@@ -10,6 +10,7 @@ Route::group(Config::get('core::routes.blog_group_rules'), function() use ($lazy
 	Route::get('post/preview/{id}', array('uses' => $lazychefControllers.'PostController@preview', 'as' => 'lazychef.posts.preview'));
 	Route::get('tag/{tag}', array('uses' => $lazychefControllers.'PostController@tag', 'as' => 'lazychef.posts.tags'));
 	Route::get('archive', array('uses' => $lazychefControllers.'PostController@index', 'as' => 'lazychef.posts.archive'));
+        Route::get('about', array('uses' => $lazychefControllers.'PostController@about', 'as' => 'lazychef.posts.about'));
 
 	Route::controller('rss', $lazychefControllers.'RssController');
 });

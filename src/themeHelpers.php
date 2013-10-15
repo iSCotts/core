@@ -69,8 +69,9 @@ function lazychef_url($link)
 	if($link[0] == '/') {
     	$link = substr($link, 1);
 	}
+        $x = route('lazychef.index', null, false);
 	if (route('lazychef.index', null, false) !== '/') {
-		return route('lazychef.index')."/{$link}";
+		return route('lazychef.index')."{$link}";
 	} else {
 		return url($link);
 	}

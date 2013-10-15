@@ -45,6 +45,21 @@ class PostController extends BaseController {
 
 		return View::make($this->theme.'.archive', compact('posts', 'search'));
 	}
+        
+        	public function about()
+	{
+//		$search = trim(Input::get('q'));
+//		if ($search)
+//		{
+//			$posts = $this->posts->search(Input::get('q'), Config::get('lazychef.per_page'));
+//		}
+//		else
+//		{
+//			$posts = $this->posts->active(Config::get('lazychef.per_page'));
+//		}
+
+		return View::make('admin.installer.complete', compact('about'));
+	}
 
 	/**
 	 * Get posts by tag
